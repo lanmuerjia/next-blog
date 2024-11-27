@@ -1,4 +1,4 @@
-name: CI for Next.js
+name: CI for Next.js with pnpm
 
 on:
   push:
@@ -21,11 +21,14 @@ jobs:
         with:
           node-version: '20' # 使用 Node.js 20.x 版本
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies with pnpm
+        run: pnpm install
 
       - name: Run ESLint
-        run: npm run lint
+        run: pnpm lint
 
   build:
     name: Build Next.js project
@@ -39,11 +42,14 @@ jobs:
         with:
           node-version: '20' # 使用 Node.js 20.x 版本
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies with pnpm
+        run: pnpm install
 
       - name: Build project
-        run: npm run build
+        run: pnpm build
 
   test:
     name: Run Tests
@@ -57,8 +63,11 @@ jobs:
         with:
           node-version: '20' # 使用 Node.js 20.x 版本
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies with pnpm
+        run: pnpm install
 
       - name: Run Tests
-        run: npm test
+        run: pnpm test
