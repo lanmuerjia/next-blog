@@ -16,6 +16,7 @@
     "@prisma/client": "^5.22.0",
     "@reactuses/core": "^5.0.23",
     "@tanstack/react-query": "^5.61.4",
+    "axios": "^1.7.8",
     "framer-motion": "^11.11.17",
     "lottie-react": "^2.4.0",
     "next": "15.0.3",

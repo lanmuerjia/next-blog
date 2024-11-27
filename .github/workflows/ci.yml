@@ -1,4 +1,4 @@
-name: CI for Next.js with pnpm
+name: ci
 
 on:
   push:
