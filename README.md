@@ -1,3 +1,5 @@
 ## Next Blog
 
-![CI Status](https://img.shields.io/github/workflow/status/lanmuerjia/next-blog/CI)
+![CI Status](https://img.shields.io/github/actions/workflow/status/lanmuerjia/next-blog/ci.yml?branch=main)
+
+#### loading...
