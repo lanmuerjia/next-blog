@@ -1,14 +1,24 @@
 "use client";
 
-import toast, { Toaster } from "react-hot-toast";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { useFetchByQuery } from "@/hooks/useFetch";
+import request from "@/lib/request";
 
 export default function Home() {
-  const notify = () => toast.success("Here is your toast.");
+  const { refetch } = useFetchByQuery({
+    enabled: false,
+    queryKey: ["signIn"],
+    queryFn: () => request.get("/api/signIn"),
+  });
+
+  const notify = async () => {
+    await refetch();
+  };
 
   return (
     <div>
       <button onClick={notify}>Make me a toast</button>
-      <Toaster />
+      <ThemeSwitcher />
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
+import Provider from "@/app/provider";
 import type { Metadata } from "next";
 import "../styles/globals.css";
 
@@ -14,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <body>{children}</body>
+      <body>
+        <Provider>{children}</Provider>
+        <Toaster />
+      </body>
     </html>
   );
 }
